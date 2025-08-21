@@ -199,14 +199,20 @@
 
   <!-- Script para cerrar el menú en móvil al hacer clic -->
   <script>
-    document.querySelectorAll('.navbar-nav .nav-link, .dropdown-item').forEach(function(element) {
-      element.addEventListener('click', function () {
-        let navbar = document.querySelector('.navbar-collapse');
-        if (navbar.classList.contains('show')) {
-          new bootstrap.Collapse(navbar).hide();
-        }
-      });
+   document.addEventListener("DOMContentLoaded", function () {
+  const navLinks = document.querySelectorAll(".navbar-nav .nav-link");
+  const navbarCollapse = document.querySelector(".navbar-collapse");
+
+  navLinks.forEach(function (link) {
+    link.addEventListener("click", function () {
+      if (window.innerWidth < 992) { 
+        // Solo en móviles/tablets
+        const bsCollapse = new bootstrap.Collapse(navbarCollapse, { toggle: true });
+      }
     });
+  });
+});
+
   </script>
 </body>
 </html>

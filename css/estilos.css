@@ -137,3 +137,7 @@ footer {
   width: 100%;
   object-fit: cover; /* para que no se deformen las imágenes */
 }
+/* Evita que el menú se cierre antes de hacer clic en un enlace en móviles */
+.navbar-collapse.show {
+  display: block !important;
+}
