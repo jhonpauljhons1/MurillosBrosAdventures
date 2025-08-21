@@ -137,3 +137,233 @@ footer {
   width: 100%;
   object-fit: cover; /* para que no se deformen las imágenes */
 }
+.destacadas-section {
+  text-align: center;
+  padding: 60px 20px;
+  background: linear-gradient(
+    135deg, 
+    rgba(0, 123, 255, 0.2),   /* Azul claro transparente */
+    rgba(0, 200, 150, 0.2),  /* Verde agua transparente */
+    rgba(255, 200, 0, 0.2)   /* Amarillo transparente */
+  );
+  border-radius: 20px;
+  margin: 40px auto;
+  max-width: 900px;
+}
+
+.destacadas-section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #004466;
+  font-weight: bold;
+}
+
+.destacadas-section p {
+  font-size: 1.2rem;
+  color: #333;
+  line-height: 1.6;
+}
+.footer-custom {
+  background: #fff;          /* Fondo blanco */
+  padding: 20px 0;
+  border-top: 1px solid #ddd;
+}
+
+.footer-logo {
+  flex: 1;
+  text-align: center;
+}
+
+.footer-img {
+  max-height: 80px;          /* Ajusta el tamaño del logo */
+  height: auto;
+}
+
+.footer-text {
+  flex: 2;
+  font-size: 0.95rem;
+  color: #333;
+}
+.footer-waves {
+  position: relative;
+  background: linear-gradient(to top, #003366, #004080);
+  height: 200px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  padding-bottom: 20px;
+}
+
+.footer-waves::before, .footer-waves::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 200px;
+  background: radial-gradient(circle at 50% 50%, rgba(255,255,255,0.2) 25%, transparent 26%);
+  background-size: 50px 50px;
+  animation: waveMove 10s linear infinite;
+}
+
+.footer-waves::after {
+  top: 20px;
+  background-size: 60px 60px;
+  opacity: 0.5;
+  animation-duration: 15s;
+}
+
+@keyframes waveMove {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-25%); }
+}
+/* Sección de equipo tipo grid */
+.team {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    padding: 50px 20px;
+    background-color: #e0f7fa;
+}
+
+.member {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.member img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.member h3 {
+    margin: 10px 0 10px 0;
+}
+
+.member p {
+    font-size: 0.9rem;
+}
+
+/* Efecto hover para los integrantes */
+.member:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 12px rgba(0,0,0,0.2);
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .team {
+        grid-template-columns: 1fr;
+    }
+}
+.member {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-top: 5px solid #007BFF; /* borde superior con color del logo */
+}
+/* ====== Ajuste para que el nav no tape el contenido ====== */
+.navbar {
+  position: fixed;   /* que quede siempre visible */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;    /* siempre arriba */
+}
+
+/* Empuja el contenido hacia abajo según la altura del navbar */
+body {
+  padding-top: 75px; /* ajusta si tu navbar es más alto o más bajo */
+}
+
+/* Para que los enlaces internos no queden tapados */
+section {
+  scroll-margin-top: 75px;
+}
+/* ====== Dinamismo sutil para MurillosBrosAdventours ====== */
+
+/* Fondo animado suave (cielo, mar, desierto) */
+body {
+  background: linear-gradient(-45deg, #fdfbf7, #ffe7c4, #a8e6cf, #d0f0fd);
+  background-size: 400% 400%;
+  animation: gradientMove 25s ease infinite;
+  transition: background 0.5s ease;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Ondas muy sutiles en la parte inferior */
+body::before {
+  content: "";
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 200%;
+  height: 150px;
+  background: radial-gradient(circle at 50% 50%, rgba(0,123,255,0.05) 25%, transparent 26%);
+  background-size: 50px 50px;
+  animation: waveMove 20s linear infinite;
+  pointer-events: none;
+  z-index: 0;
+}
+
+@keyframes waveMove {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-20%); }
+}
+
+/* Secciones flotantes sutiles al pasar el cursor */
+section {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 15px rgba(0,0,0,0.08);
+}
+
+/* Links y botones con brillo suave al pasar cursor */
+.nav-link:hover, .btn:hover {
+  text-shadow: 0 0 3px rgba(255,255,255,0.3);
+  transform: scale(1.03);
+  transition: transform 0.2s ease, text-shadow 0.2s ease;
+}
+
+/* Gradiente animado en secciones destacadas */
+.destacadas-section {
+  background: linear-gradient(
+    135deg, 
+    rgba(0, 123, 255, 0.15),
+    rgba(0, 200, 150, 0.15),
+    rgba(255, 200, 0, 0.15)
+  );
+  background-size: 400% 400%;
+  animation: gradientMove 25s ease infinite;
+}
+
+/* Footer con ondas suaves */
+.footer-waves::before, .footer-waves::after {
+  background-size: 60px 60px;
+  opacity: 0.2;
+}
+
+
+
+
