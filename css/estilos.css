@@ -187,7 +187,7 @@ footer {
 .footer-waves {
   position: relative;
   background: linear-gradient(to top, #003366, #004080);
-  height: 200px;
+  height: 100px;
   overflow: hidden;
   display: flex;
   justify-content: center;
@@ -360,10 +360,12 @@ section:hover {
 
 /* Footer con ondas suaves */
 .footer-waves::before, .footer-waves::after {
-  background-size: 60px 60px;
+  background-size: 40px 40px;
   opacity: 0.2;
 }
-
-
-
-
+.logo-navbar {
+  height: 80px;   /* Ajusta el tamaño que necesites */
+}
+.navbar {
+  background-color: #dce3eb; /* Cambia por el color que quieras */
+}
