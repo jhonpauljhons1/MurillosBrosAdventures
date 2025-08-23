@@ -127,9 +127,13 @@ footer {
 }
 /* Estilos para mini carruseles dentro del dropdown */
 .mini-carousel {
-  height: 100px; /* altura del carrusel */
+  height: 400px; /* altura del carrusel */
   width: 100%;   /* ancho completo del dropdown */
   overflow: hidden;
+   background-color: #cbecdc; /* fondo suave */
+  border-radius: 12px;       /* opcional, bordes redondeados */
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2); /* sombra ligera */
+  padding: 10px;             /* espacio para que no quede pegado */
 }
 
 .mini-carousel .carousel-item img {
@@ -369,3 +373,37 @@ section:hover {
 .navbar {
   background-color: #dce3eb; /* Cambia por el color que quieras */
 }
+/* Fondo negro ahumado del modal */
+.modal-backdrop.show {
+  background-color: rgba(0, 0, 0, 0.85);
+}
+
+/* Quita cualquier caja por defecto del contenido del modal */
+#galleryModal .modal-content {
+  box-shadow: none;
+}
+
+/* Cursor de zoom sobre las imágenes del carrusel */
+.gallery-img {
+  cursor: zoom-in;
+}
+.img-thumbnail-carousel {
+  max-width: 500px;   /* controla el ancho máximo */
+  height: auto;       /* mantiene proporción */
+  border-radius: 12px; /* bordes suaves */
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2); /* sombra sutil */
+  margin: 0 auto;     /* centra la miniatura dentro del carrusel */
+  display: block;
+  object-fit: cover;
+}
+.firma-gif {
+  position: fixed;       /* siempre visible, incluso al hacer scroll */
+  top: 10px;             /* distancia desde arriba */
+  right: 10px;           /* distancia desde la derecha */
+  width: 100px;           /* tamaño del GIF */
+  height: 100px;
+  z-index: 9999;         /* para que esté por encima de todo */
+  pointer-events: none;  /* para que no bloquee clicks en el menú o contenido */
+}
+
+
